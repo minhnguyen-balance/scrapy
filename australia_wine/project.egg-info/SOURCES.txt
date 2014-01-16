@@ -1,0 +1,12 @@
+setup.py
+australia_wine/__init__.py
+australia_wine/items.py
+australia_wine/pipelines.py
+australia_wine/settings.py
+australia_wine/spiders/__init__.py
+australia_wine/spiders/winespider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
