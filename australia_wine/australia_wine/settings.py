@@ -8,8 +8,9 @@
 
 BOT_NAME = 'australia_wine'
 
-SPIDER_MODULES = ['australia_wine.spiders']
-NEWSPIDER_MODULE = 'australia_wine.spiders'
-
+SPIDER_MODULES      = ['australia_wine.spiders']
+NEWSPIDER_MODULE    = 'australia_wine.spiders'
+FEED_FORMAT         = "csv"
+FEED_STORE_EMPTY    = True
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'australia_wine (+http://www.yourdomain.com)'

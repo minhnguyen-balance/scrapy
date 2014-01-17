@@ -12,7 +12,19 @@ class WineSpider(BaseSpider) :
     def __init__(self, *args, **kwargs):
         super(WineSpider, self).__init__(*args, **kwargs)
         self.current_product = 1
-        pass
+        from scrapy.conf import settings
+        #get job_id parameter
+        import os, sys
+        print sys.argv
+
+        if (len(sys.argv)>2):
+            if ('_job' in sys.argv[3]):
+                self.jobid = sys.argv[3].rsplit('=')[1]
+
+        settings.overrides['FEED_URI'] ="/var/lib/scrapyd/items/australia_wine/%(name)s/"+self.jobid+".csv"
+        settings.overrides['DOWNLOAD_TIMEOUT'] = 360
+
+
     def parse(self, response):
         hxs     = Selector(response)
         ul_products  = hxs.xpath('//div[@class="category-products"]/ul')
